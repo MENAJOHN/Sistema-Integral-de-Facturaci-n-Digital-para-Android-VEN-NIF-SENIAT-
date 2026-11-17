@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/header_gradient"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/white"
+            android:contentDescription="Atrás" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/tvTituloTipoDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NUEVA FACTURA"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvFacturaCorrelativo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Factura #001001 | Control #000501"
+                android:textColor="#E0E7FF"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFacturaReloj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17:40:00"
+            android:textColor="#F1F5F9"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Card Cliente y Vendedor -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cliente:"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_main" />
+
+                    <Spinner
+                        android:id="@+id/spnClientes"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vendedor:"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_main"
+                        android:layout_marginTop="8dp" />
+
+                    <Spinner
+                        android:id="@+id/spnVendedores"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg" />
+
+                    <TextView
+                        android:id="@+id/tvLabelRefExtra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Observación / Referencia (Opcional):"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary"
+                        android:layout_marginTop="8dp" />
+
+                    <EditText
+                        android:id="@+id/etReferenciaExtra"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg"
+                        android:hint="Ingrese detalle o referencia adicional"
+                        android:inputType="text"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card Artículos de la factura -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Artículos Seleccionados:"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_main" />
+
+                        <Button
+                            android:id="@+id/btnAgregarServicioLibre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:layout_marginEnd="6dp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@drawable/button_secondary"
+                            android:text="+ SERVICIO LIBRE"
+                            android:textColor="@color/primary"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnAgregarItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="38dp"
+                            android:paddingHorizontal="12dp"
+                            android:background="@drawable/button_primary"
+                            android:text="+ ARTÍCULO"
+                            android:textColor="@color/white"
+                            android:textSize="11.5sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvEmptyItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="No ha agregado ningún artículo a la factura."
+                        android:textSize="12sp"
+                        android:textColor="@color/text_muted"
+                        android:gravity="center"
+                        android:paddingVertical="16dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvItemsFactura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card Resumen de Totales -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:background="#F8FAFC">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Subtotal:"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvSubtotalBs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bs. 0.00"
+                            android:textColor="@color/text_main"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/tvIvaLabel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="IVA (16%):"
+                            android:textColor="@color/text_muted"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvIvaBs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bs. 0.00"
+                            android:textColor="@color/text_main"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/border_color"
+                        android:layout_marginVertical="6dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TOTAL A PAGAR:"
+                            android:textColor="@color/primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTotalBs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bs. 0.00"
+                            android:textColor="@color/primary"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="4dp">
+
+                        <TextView
+                            android:id="@+id/tvTasaInfo"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Ref. Dólares (Tasa: Bs. 36.50):"
+                            android:textColor="@color/accent_green"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalUSD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 0.00"
+                            android:textColor="@color/accent_green"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btnProcesarFactura"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/button_primary"
+                android:text="EMITIR FACTURA DIGITAL"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

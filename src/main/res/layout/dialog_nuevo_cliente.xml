@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ficha de Cliente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <EditText
+            android:id="@+id/etCliCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Código (ej. CLI-005)"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCliNombre"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Nombre o Razón Social"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCliRif"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="RIF / Cédula"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCliTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Teléfono / WhatsApp"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCliCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Correo Electrónico"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etCliDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Dirección Fiscal"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGuardarCliente"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="GUARDAR"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancelarCliente"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="18dp"
+                android:background="@drawable/button_danger"
+                android:text="CANCELAR"
+                android:textColor="#DC2626"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloDialogVen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ficha de Vendedor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <!-- Foto del Vendedor -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/card_rounded"
+            android:padding="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivVenFotoPreview"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/app_logo"
+                android:background="@drawable/edittext_bg"
+                android:padding="2dp"
+                android:contentDescription="Foto del Vendedor" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Foto del Vendedor:"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <Button
+                    android:id="@+id/btnSeleccionarFotoVendedor"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/button_primary"
+                    android:text="📷 ADJUNTAR FOTO"
+                    android:textColor="@color/white"
+                    android:textSize="11.5sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etVenCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Código (ej. VEN-004)"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenNombre"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Nombre Completo del Vendedor"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenCedula"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Cédula de Identidad / RIF (ej. V-12345678)"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Dirección de Habitación / Zona"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Teléfono de Contacto"
+            android:inputType="phone"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etVenComision"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Comisión % (ej. 5.0)"
+            android:inputType="numberDecimal"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGuardarVendedor"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="GUARDAR"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancelarVendedor"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="18dp"
+                android:background="@drawable/button_danger"
+                android:text="CANCELAR"
+                android:textColor="#DC2626"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

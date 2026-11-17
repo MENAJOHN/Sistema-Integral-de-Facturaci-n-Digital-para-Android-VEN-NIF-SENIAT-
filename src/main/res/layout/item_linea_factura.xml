@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingVertical="6dp"
+    android:paddingHorizontal="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvItemDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Descripción del Artículo"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_main" />
+
+        <ImageButton
+            android:id="@+id/btnItemMinus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_input_delete"
+            android:contentDescription="Restar" />
+
+        <TextView
+            android:id="@+id/tvItemCantidad"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <ImageButton
+            android:id="@+id/btnItemPlus"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_input_add"
+            android:contentDescription="Sumar" />
+
+        <!-- Botón al lado de cantidad para editar Precio de Venta cuando está permitido en Configuración -->
+        <Button
+            android:id="@+id/btnItemEditPrecio"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_marginStart="4dp"
+            android:paddingHorizontal="8dp"
+            android:background="@drawable/button_secondary"
+            android:text="✏️ Precio"
+            android:textColor="@color/primary"
+            android:textSize="10.5sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnItemDelete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Eliminar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp">
+
+        <TextView
+            android:id="@+id/tvItemPrecio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bs. 100.00 ($ 2.74)"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted" />
+
+        <TextView
+            android:id="@+id/tvItemSubtotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bs. 100.00"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/border_color"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

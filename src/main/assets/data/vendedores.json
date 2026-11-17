@@ -1,0 +1,32 @@
+[
+  {
+    "codigo": "VEN-001",
+    "nombre": "John Mena",
+    "cedula": "V-15234890",
+    "direccion": "Caracas, La California",
+    "telefono": "0424-1958013",
+    "correo": "mena@todoencomputacion.com",
+    "comision": 5.0,
+    "foto": ""
+  },
+  {
+    "codigo": "VEN-002",
+    "nombre": "Rolbi Blanco",
+    "cedula": "V-18456123",
+    "direccion": "Caracas, Chacao",
+    "telefono": "0414-3322110",
+    "correo": "rolbi@todoencomputacion.com",
+    "comision": 5.0,
+    "foto": ""
+  },
+  {
+    "codigo": "VEN-003",
+    "nombre": "Vendedor Mostrador",
+    "cedula": "V-20112233",
+    "direccion": "Sede Principal",
+    "telefono": "0212-2345678",
+    "correo": "mostrador@todoencomputacion.com",
+    "comision": 2.0,
+    "foto": ""
+  }
+]

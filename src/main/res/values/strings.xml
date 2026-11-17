@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Facturación Digital</string>
+    <string name="company_name">TODO EN COMPUTACION</string>
+    <string name="company_slogan">Soluciones Inteligentes - Tu Facturación Online</string>
+    <string name="login_title">Iniciar Sesión</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="btn_login">INGRESAR AL SISTEMA</string>
+</resources>

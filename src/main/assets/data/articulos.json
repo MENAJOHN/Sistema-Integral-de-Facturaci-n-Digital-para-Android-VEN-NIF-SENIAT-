@@ -1,0 +1,69 @@
+[
+  {
+    "codigo": "SERV-GEN",
+    "descripcion": "SERVICIO GENÉRICO (Descripción y Precio Libre)",
+    "precioUSD": 0.00,
+    "precioBs": 0.00,
+    "stock": 0,
+    "imagen": "licencia.png",
+    "tipoArticulo": "S",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0,
+    "esGenerico": true
+  },
+  {
+    "codigo": "ART-001",
+    "descripcion": "Laptop Dell Vostro 15 Core i7 16GB SSD 512GB",
+    "precioUSD": 650.00,
+    "precioBs": 23725.00,
+    "stock": 8,
+    "imagen": "laptop.png",
+    "tipoArticulo": "V",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0
+  },
+  {
+    "codigo": "ART-002",
+    "descripcion": "Impresora Fiscal Térmica USB / Serial HKA",
+    "precioUSD": 380.00,
+    "precioBs": 13870.00,
+    "stock": 15,
+    "imagen": "impresora.png",
+    "tipoArticulo": "V",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0
+  },
+  {
+    "codigo": "ART-003",
+    "descripcion": "Router Inalámbrico Doble Banda Gigabit AC1200",
+    "precioUSD": 35.00,
+    "precioBs": 1277.50,
+    "stock": 40,
+    "imagen": "router.png",
+    "tipoArticulo": "V",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0
+  },
+  {
+    "codigo": "ART-004",
+    "descripcion": "Teclado y Mouse Inalámbrico USB Ergonómico",
+    "precioUSD": 20.00,
+    "precioBs": 730.00,
+    "stock": 55,
+    "imagen": "teclado.png",
+    "tipoArticulo": "V",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0
+  },
+  {
+    "codigo": "ART-005",
+    "descripcion": "Servicio Licencia Sistema Facturación Digital 100 Docs",
+    "precioUSD": 80.00,
+    "precioBs": 2920.00,
+    "stock": 0,
+    "imagen": "licencia.png",
+    "tipoArticulo": "S",
+    "tipoIva": "16%",
+    "porcentajeIva": 16.0
+  }
+]

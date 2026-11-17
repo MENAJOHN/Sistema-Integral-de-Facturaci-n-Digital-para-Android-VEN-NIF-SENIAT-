@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvFacturaNumero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Factura #001001"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvFacturaControl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Control: 000501"
+                android:textSize="12sp"
+                android:textColor="@color/accent_red"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvFacturaCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INVERSIONES TECNO-DIGITAL C.A."
+            android:textSize="13sp"
+            android:textColor="@color/text_main"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tvFacturaFechaHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2026-11-06 17:40"
+            android:textSize="12sp"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="2dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/border_color"
+            android:layout_marginVertical="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvFacturaTotalBs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bs. 25,000.00"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_blue" />
+
+            <TextView
+                android:id="@+id/tvFacturaTotalUSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 684.93"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_green" />
+
+            <TextView
+                android:id="@+id/tvFacturaEmisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Por: mena"
+                android:textSize="11sp"
+                android:textColor="@color/text_muted" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

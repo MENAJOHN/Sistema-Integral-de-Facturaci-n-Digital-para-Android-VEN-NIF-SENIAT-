@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/header_gradient"
+            android:padding="14dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBackConfig"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_revert"
+                app:tint="@color/white"
+                android:contentDescription="Atrás" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CONFIGURACIÓN (MASTER)"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la Empresa:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main" />
+
+            <EditText
+                android:id="@+id/etCfgEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eslogan / Subtítulo:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etCfgEslogan"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RIF de la Empresa:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etCfgRif"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfono / WhatsApp:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etCfgTelefono"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo Electrónico:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etCfgCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección Fiscal:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/etCfgDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edittext_bg"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasa Dólar (Bs.):"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <EditText
+                        android:id="@+id/etCfgTasaDolar"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="numberDecimal"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="IVA (%):"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <EditText
+                        android:id="@+id/etCfgIva"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="numberDecimal"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Próx. N° Factura:"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary" />
+
+                    <EditText
+                        android:id="@+id/etCfgProxFactura"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Próx. N° Control:"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_red" />
+
+                    <EditText
+                        android:id="@+id/etCfgProxControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/edittext_bg"
+                        android:inputType="number"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sección Control de Stock en Facturación -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONTROL DE INVENTARIO Y STOCK EN VENTAS"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Por defecto el sistema bloquea la facturación si un artículo Tipo Venta (V) no tiene stock disponible. Los artículos Tipo Servicio no manejan stock."
+                    android:textSize="11.5sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="2dp" />
+
+                <CheckBox
+                    android:id="@+id/cbCfgPermitirStockNegativo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Permitir vender / facturar con Stock Negativo (Vender sin stock disponible)"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/border_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDICIÓN DE PRECIO DE VENTA EN FACTURA:"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Permitir editar el precio de venta al lado de la cantidad en la factura antes de procesarla?"
+                    android:textSize="11.5sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="2dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgCfgEditarPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="6dp">
+
+                    <RadioButton
+                        android:id="@+id/rbCfgEditarPrecioSi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SÍ (Permitir editar precio)"
+                        android:textSize="12.5sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_green" />
+
+                    <RadioButton
+                        android:id="@+id/rbCfgEditarPrecioNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="NO (Precio fijo)"
+                        android:textSize="12.5sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/accent_red" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!-- Sección Logo del Cliente para Factura PDF -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOGO DEL CLIENTE / EMPRESA (FORMATO PDF)"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tvEstadoLogoPdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Actualmente usando tu logo por defecto en el encabezado del PDF."
+                    android:textSize="11.5sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="2dp" />
+
+                <ImageView
+                    android:id="@+id/ivCfgLogoPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#F8FAFC"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_horizontal"
+                    android:contentDescription="Vista previa de logo PDF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/btnAdjuntarLogoCliente"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/button_primary"
+                        android:text="📎 ADJUNTAR LOGO CLIENTE"
+                        android:textColor="@color/white"
+                        android:textSize="11.5sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnRestaurarLogoPropio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="42dp"
+                        android:paddingHorizontal="12dp"
+                        android:background="@drawable/button_secondary"
+                        android:text="USAR MI LOGO"
+                        android:textColor="@color/primary"
+                        android:textSize="11.5sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sección Imprenta Digital -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="12dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONFIGURACIÓN DE IMPRENTA DIGITAL"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario para Imprenta Digital:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etCfgUsuarioImprenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Ingrese usuario de imprenta digital"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clave de Imprenta:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etCfgClaveImprenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Ingrese clave de imprenta"
+                    android:inputType="textPassword"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Token de Imprenta Digital:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="4dp">
+
+                    <EditText
+                        android:id="@+id/etCfgTokenImprenta"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_bg"
+                        android:hint="Ingrese o actualice el Token"
+                        android:inputType="text"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/btnActualizarToken"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:paddingHorizontal="12dp"
+                        android:background="@drawable/button_primary"
+                        android:text="ACTUALIZAR TOKEN"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Sección de Permisos y Perfiles (usuario / caja) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_rounded"
+                android:padding="14dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERMISOS DE PERFILES (USUARIO Y CAJA)"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccione el perfil para activar o desactivar opciones y reportes (El Master siempre tiene acceso total):"
+                    android:textSize="11.5sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="2dp" />
+
+                <!-- Selector de Perfil: usuario vs caja -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/btnSelectPerfilUsuario"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/button_primary"
+                        android:text="👤 USUARIO (1234)"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btnSelectPerfilCaja"
+                        android:layout_width="0dp"
+                        android:layout_height="42dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/button_secondary"
+                        android:text="🏧 CAJA (1234)"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPerfilEditandoLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Editando permisos de: PERFIL USUARIO"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/accent_red" />
+
+                <!-- Grupo 1: Documentos de Emisión -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="📄 Documentos de Emisión (Pantalla Inicial):"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <CheckBox
+                    android:id="@+id/cbPermFactura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Factura (Nueva Factura de Venta)"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermFacturaTerceros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Factura a terceros"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermNotaCredito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nota de crédito"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermNotaCreditoParcial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nota de crédito parcial"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermNotaDebito"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nota de débito"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermOrdenEntrega"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orden de entrega"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermOrdenEntregaInd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Orden de entrega individual"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermGuiaDespacho"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Guía de despacho"
+                    android:textSize="13sp" />
+
+                <!-- Grupo 2: Catálogos -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="📦 Catálogos (Pestaña Catálogos):"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <CheckBox
+                    android:id="@+id/cbPermArticulos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Artículos y Productos"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermClientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clientes"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermVendedores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vendedores"
+                    android:textSize="13sp" />
+
+                <!-- Grupo 3: Reportes -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="📊 Reportes (Pestaña Reportes):"
+                    android:textSize="12.5sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <CheckBox
+                    android:id="@+id/cbPermRepHistorial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Historial de Documentos / Facturas Emitidas"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermRepVentas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reporte General de Ventas (Bs. y USD)"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermRepVendedores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reporte de Ventas y Comisiones por Vendedor"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermRepInventario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reporte de Inventario y Stock Valorizado"
+                    android:textSize="13sp" />
+
+                <CheckBox
+                    android:id="@+id/cbPermRepNotasGuias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Reporte de Notas de Crédito/Débito y Guías"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnGuardarConfig"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_primary"
+                android:text="GUARDAR CAMBIOS"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRestablecerAssets"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_secondary"
+                android:text="RESTABLECER DATOS DE FÁBRICA"
+                android:textColor="@color/accent_red"
+                android:textSize="12sp"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

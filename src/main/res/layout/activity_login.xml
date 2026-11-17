@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ivBannerLogo"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_horizontal"
+            android:contentDescription="Todo en Computacion Banner" />
+
+        <ImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/app_logo"
+            android:contentDescription="Facturación Digital Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FACTURACIÓN DIGITAL"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/tvLiveClockLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha y Hora"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/text_muted"
+            android:layout_marginTop="4dp" />
+
+        <!-- Panel Ejecutivo Superior: Tasas Informativas BCV (USD y EUR) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_tasas_bcv"
+            android:layout_marginTop="14dp"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="10dp"
+            android:elevation="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="★  TIPO DE CAMBIO OFICIAL BCV (INFORMATIVO)  ★"
+                android:textColor="#FDE047"
+                android:textSize="10.5sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:letterSpacing="0.08" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false">
+
+                <!-- Tasa USD -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_pill_tasa"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$  DÓLAR (USD)"
+                        android:textColor="#86EFAC"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:letterSpacing="0.06" />
+
+                    <TextView
+                        android:id="@+id/tvTasaUsdLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Bs. 899,27"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:letterSpacing="0.02" />
+                </LinearLayout>
+
+                <!-- Tasa EUR -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/bg_pill_tasa"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="10dp"
+                    android:layout_marginStart="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="€  EURO (EUR)"
+                        android:textColor="#93C5FD"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-condensed"
+                        android:letterSpacing="0.06" />
+
+                    <TextView
+                        android:id="@+id/tvTasaEurLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Bs. 1.006,61"
+                        android:textColor="#FFFFFF"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:letterSpacing="0.02" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Acceso al Sistema"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ingrese sus credenciales de usuario"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_muted"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <EditText
+                    android:id="@+id/etUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Ingrese su usuario"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Contraseña:"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_main" />
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="contraseña"
+                    android:inputType="textPassword"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_primary"
+                    android:text="INGRESAR AL SISTEMA"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Botón Ejecutivo de Huella Dactilar -->
+                <LinearLayout
+                    android:id="@+id/btnHuella"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_fingerprint_btn"
+                    android:padding="12dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <FrameLayout
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_fingerprint_circle"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_fingerprint"
+                            android:contentDescription="Huella Dactilar" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="INGRESAR CON HUELLA DACTILAR"
+                            android:textColor="#0369A1"
+                            android:textSize="13.5sp"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-condensed"
+                            android:letterSpacing="0.03" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Toque aquí para acceso biométrico rápido"
+                            android:textColor="#475569"
+                            android:textSize="11.5sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Teléfonos y Contacto al WhatsApp Soporte Automático -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_rounded"
+            android:layout_marginTop="20dp"
+            android:padding="14dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teléfonos y Soporte Técnico:"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary" />
+
+            <TextView
+                android:id="@+id/tvTelefonosSoporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 04241958013"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"
+                android:layout_marginTop="4dp" />
+
+            <EditText
+                android:id="@+id/etNombreSoporte"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Su Nombre"
+                android:inputType="textPersonName"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/etConsultaSoporte"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/edittext_bg"
+                android:hint="Escriba su consulta para soporte..."
+                android:inputType="text"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnWhatsappSoporte"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_whatsapp"
+                android:text="CONTACTO WHATSAPP SOPORTE AUTOMÁTICO"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="TODO EN COMPUTACION - Caracas, Venezuela"
+            android:textSize="11sp"
+            android:textColor="@color/text_muted" />
+
+    </LinearLayout>
+</ScrollView>

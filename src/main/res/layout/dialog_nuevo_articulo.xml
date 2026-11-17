@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTituloDialogArt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ficha de Artículo / Servicio"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <EditText
+            android:id="@+id/etArtCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Código (ej. ART-006)"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etArtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Descripción del Artículo o Servicio"
+            android:textSize="13sp" />
+
+        <EditText
+            android:id="@+id/etArtPrecioUSD"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Precio en USD ($)"
+            android:inputType="numberDecimal"
+            android:textSize="13sp" />
+
+        <!-- Tipo de Artículo: Tipo V (Venta con Stock) vs Servicio (Sin Stock) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tipo de Ficha (Inventario / Stock):"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <RadioGroup
+            android:id="@+id/rgArtTipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_rounded"
+            android:padding="8dp"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/rbArtTipoVenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Tipo V - Venta (Sí maneja Stock)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main" />
+
+            <RadioButton
+                android:id="@+id/rbArtTipoServicio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo Servicio (No lleva Stock)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_main" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvLabelArtStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Cantidad en Stock:"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_main" />
+
+        <EditText
+            android:id="@+id/etArtStock"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Cantidad en Stock"
+            android:inputType="numberSigned"
+            android:textSize="13sp" />
+
+        <!-- Tipo de IVA: 16%, 8%, 32%, Exento -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tipo de Impuesto (IVA):"
+            android:textSize="12.5sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <RadioGroup
+            android:id="@+id/rgArtIva"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_rounded"
+            android:padding="8dp"
+            android:layout_marginTop="4dp">
+
+            <RadioButton
+                android:id="@+id/rbIva16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="IVA General 16%"
+                android:textSize="13sp"
+                android:textColor="@color/text_main" />
+
+            <RadioButton
+                android:id="@+id/rbIva8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IVA Reducido 8%"
+                android:textSize="13sp"
+                android:textColor="@color/text_main" />
+
+            <RadioButton
+                android:id="@+id/rbIva32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IVA Adicional 32%"
+                android:textSize="13sp"
+                android:textColor="@color/text_main" />
+
+            <RadioButton
+                android:id="@+id/rbIvaExento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Exento (No lleva IVA - 0%)"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/accent_green" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etArtImagen"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Nombre de foto (ej. laptop.png)"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnGuardarArticulo"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:text="GUARDAR"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCancelarArticulo"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="18dp"
+                android:background="@drawable/button_danger"
+                android:text="CANCELAR"
+                android:textColor="#DC2626"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

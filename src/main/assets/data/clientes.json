@@ -1,0 +1,34 @@
+[
+  {
+    "codigo": "CLI-001",
+    "nombre": "INVERSIONES TECNO-DIGITAL, C.A.",
+    "rif": "J-31045231-1",
+    "telefono": "0414-2345678",
+    "correo": "ventas@tecnodigital.com",
+    "direccion": "Av. Francisco de Miranda, Edif Centro, Chacao, Caracas"
+  },
+  {
+    "codigo": "CLI-002",
+    "nombre": "DISTRIBUIDORA AGATA 2026, C.A.",
+    "rif": "J-40552190-2",
+    "telefono": "0412-8877665",
+    "correo": "contacto@distagata.com",
+    "direccion": "Calle Los Cortijos, Local 4, Caracas"
+  },
+  {
+    "codigo": "CLI-003",
+    "nombre": "PEDRO PEREZ (CLIENTE FINAL)",
+    "rif": "V-18765432",
+    "telefono": "0424-9988771",
+    "correo": "pedroperez@gmail.com",
+    "direccion": "Caracas, El Silencio"
+  },
+  {
+    "codigo": "CLI-004",
+    "nombre": "SUMINISTROS LA CALIFORNIA, S.A.",
+    "rif": "J-29837482-3",
+    "telefono": "0416-5544332",
+    "correo": "suministroslacalifornia@gmail.com",
+    "direccion": "Av. La California Norte, Local 12, Caracas"
+  }
+]
